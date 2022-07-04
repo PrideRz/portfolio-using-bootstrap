@@ -1,0 +1,148 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(64deg, rgb(156, 122, 250), hsl(147, 91%, 69%), hsl(0, 87%, 79%));
+
+  text-align: center;
+}
+
+::selection {
+  color: #fff;
+  background: #af0a4f;
+}
+
+.wrapper {
+  width: 880px;
+  padding: 35px;
+  background: linear-gradient(102deg, rgba(255, 245, 245, 0.1), rgba(255, 153, 153, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 1.2;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 245, 245, 0.8);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+}
+
+.wrapper .input-field {
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+
+.wrapper .content-box {
+  padding: 20px 20px 20px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: #fff;
+}
+
+.content-box .typing-text {
+  overflow: hidden;
+  max-height: 312px;
+}
+
+.typing-text::-webkit-scrollbar {
+  width: 0;
+}
+
+.content-box .content {
+  margin-top: 17px;
+  display: flex;
+  padding: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #bfbfbf;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@media (max-width: 518px) {
+  .wrapper .content-box {
+    padding: 10px 15px 0;
+  }
+
+  .typing-text p {
+    font-size: 18px;
+  }
+
+  .result-details li {
+    margin-bottom: 10px;
+  }
+
+  .content button {
+    margin-top: 10px;
+  }
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  height: 52px;
+  width: 220px;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding: 0 10px;
+}
+.btn .inner {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.03);
+}
+.btn:hover .inner {
+  left: 0;
+}
+.btn1 .inner {
+  background: -webkit-linear-gradient(right, rgb(156, 122, 250), hsl(147, 91%, 69%), hsl(0, 87%, 79%), rgb(156, 122, 250), hsl(147, 91%, 69%), hsl(0, 87%, 79%));
+}
+.btn2 .inner {
+  background: -webkit-linear-gradient(right, rgb(156, 122, 250), hsl(147, 91%, 69%), hsl(0, 87%, 79%), rgb(156, 122, 250), hsl(147, 91%, 69%), hsl(0, 87%, 79%));
+}
